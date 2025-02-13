@@ -12,6 +12,5 @@ public abstract class Items
         Name = name;
         Weight = weight;
     }
-    public abstract void Use(Character target);
 
 }
