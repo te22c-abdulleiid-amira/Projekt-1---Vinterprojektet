@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\amira.abdulleiid\\OneDrive\\Dokument\\programering\\Projekt 1 – Vinterprojektet\\Projekt 1 – Vinterprojektet\\Projekt 1 – Vinterprojektet.csproj",
+      "projectUniqueName": "C:\\Users\\amira.abdulleiid\\OneDrive\\Dokument\\programering\\Projekt 2 – Slutprojektet\\Projekt 1 – Vinterprojektet\\Projekt 1 – Vinterprojektet.csproj",
       "projectName": "Projekt 1 – Vinterprojektet",
-      "projectPath": "C:\\Users\\amira.abdulleiid\\OneDrive\\Dokument\\programering\\Projekt 1 – Vinterprojektet\\Projekt 1 – Vinterprojektet\\Projekt 1 – Vinterprojektet.csproj",
+      "projectPath": "C:\\Users\\amira.abdulleiid\\OneDrive\\Dokument\\programering\\Projekt 2 – Slutprojektet\\Projekt 1 – Vinterprojektet\\Projekt 1 – Vinterprojektet.csproj",
       "packagesPath": "C:\\Users\\amira.abdulleiid\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\amira.abdulleiid\\OneDrive\\Dokument\\programering\\Projekt 1 – Vinterprojektet\\Projekt 1 – Vinterprojektet\\obj\\",
+      "outputPath": "C:\\Users\\amira.abdulleiid\\OneDrive\\Dokument\\programering\\Projekt 2 – Slutprojektet\\Projekt 1 – Vinterprojektet\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
