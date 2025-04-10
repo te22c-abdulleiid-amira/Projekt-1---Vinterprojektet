@@ -14,7 +14,6 @@ public class Potions : Items
 
     public override void Use(Character target)
     {
-        target.HP += HealAmount;
-        Console.WriteLine($"{target.Name} dricker {Name} och återfår {HealAmount} HP!");
+        
     }
 }

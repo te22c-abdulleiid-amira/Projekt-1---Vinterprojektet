@@ -19,3 +19,4 @@ public abstract class Items
         Console.WriteLine($"{Name} används, men har ingen specifik effekt.");
     }
 }
+
