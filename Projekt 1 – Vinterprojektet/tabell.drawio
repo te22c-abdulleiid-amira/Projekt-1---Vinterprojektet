@@ -1,0 +1,118 @@
+<mxfile host="65bd71144e">
+    <diagram id="oA_2qftPaEZkycEzTWtB" name="Page-1">
+        <mxGraphModel dx="554" dy="427" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="Item" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="180" y="55" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="+ Item(name, weight)&lt;div&gt;&lt;div&gt;+ Use() : void&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="180" y="145" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="- &lt;span class=&quot;hljs-type&quot;&gt;Name&lt;/span&gt;: string &lt;br&gt;- Weight: &lt;span class=&quot;hljs-type&quot;&gt;float&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="180" y="85" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="7" target="3" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="100" y="240"/>
+                            <mxPoint x="240" y="240"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="7" value="Weapon" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="280" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="+ Use(target: &lt;span class=&quot;hljs-type&quot;&gt;Character&lt;/span&gt;)&lt;div&gt;+ Weapon(name, weight, damage)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="370" width="120" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="- Damage: &lt;span class=&quot;hljs-type&quot;&gt;int&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="310" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="Inventory" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="50" width="150" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="+ AddItem: &lt;span class=&quot;hljs-type&quot;&gt;bool&lt;br&gt;&lt;/span&gt;+ RemoveItem: &lt;span class=&quot;hljs-type&quot;&gt;bool&lt;/span&gt; &lt;br&gt;+ UseItem(itemName: string, target: &lt;span class=&quot;hljs-type&quot;&gt;Character&lt;/span&gt;) &lt;br&gt;+ GetTotalWeight(): &lt;span class=&quot;hljs-type&quot;&gt;float&lt;/span&gt;&lt;div&gt;&lt;span class=&quot;hljs-type&quot;&gt;&lt;div&gt;&amp;nbsp;IF GetTotalWeight() + item.Weight &amp;gt; maxWeight&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;THEN Print &quot;Inventory är fullt!&quot;&lt;/span&gt;&lt;/div&gt;&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="140" width="150" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="- items: List&amp;lt;Item&amp;gt; &lt;br&gt;- maxWeight: &lt;span class=&quot;hljs-type&quot;&gt;float&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="80" width="150" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="Character" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="160" y="510" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="&lt;div&gt;&lt;font color=&quot;#000000&quot;&gt;+ Character(name, strength, hp, maxInventoryWeight)&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#000000&quot;&gt;+ UseItem(itemName: string)&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#000000&quot;&gt;+ SetCurrentWeapon(weapon: Weapon)&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#000000&quot;&gt;IF UseItem(itemName) AND item finns&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;THEN item.Use() och REMOVE item&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#000000&quot;&gt;ELSE Print &quot;Föremålet finns inte i inventoryt.&quot;&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="160" y="620" width="200" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="- &lt;span class=&quot;hljs-type&quot;&gt;Name&lt;/span&gt;: string&lt;br&gt;- Strength: &lt;span class=&quot;hljs-type&quot;&gt;int&lt;/span&gt; &lt;br&gt;- HP: &lt;span class=&quot;hljs-type&quot;&gt;int&lt;/span&gt; &lt;br&gt;- Inventory: Inventory |&amp;nbsp;CurrentWeapon: Weapon" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="160" y="540" width="200" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="18" target="16" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="150" y="820"/>
+                            <mxPoint x="260" y="820"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="18" value="MaleCharacter" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="90" y="860" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="+ Use(target: &lt;span class=&quot;hljs-type&quot;&gt;Character&lt;/span&gt;)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="90" y="950" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="- Damage: &lt;span class=&quot;hljs-type&quot;&gt;int&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="90" y="890" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" style="edgeStyle=none;html=1;" parent="1" source="21" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="260" y="780" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="380" y="820"/>
+                            <mxPoint x="260" y="820"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="21" value="FemaleCharacter" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="860" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="+ Use(target: &lt;span class=&quot;hljs-type&quot;&gt;Character&lt;/span&gt;)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="950" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="- Damage: &lt;span class=&quot;hljs-type&quot;&gt;int&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="890" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="31" target="3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="Potion" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="180" y="280" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="+ Use(target: &lt;span class=&quot;hljs-type&quot;&gt;Character&lt;/span&gt;)&lt;div&gt;+ Weapon(name, weight, damage)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="180" y="370" width="120" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="- HealAmount: int" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="180" y="310" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="35" target="3" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="380" y="240"/>
+                            <mxPoint x="240" y="240"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="35" value="Armor" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="280" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="+ Use(target: &lt;span class=&quot;hljs-type&quot;&gt;Character&lt;/span&gt;)&lt;div&gt;+ Weapon(name, weight, damage)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="370" width="120" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="&amp;nbsp;- Defense: int" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="310" width="120" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
