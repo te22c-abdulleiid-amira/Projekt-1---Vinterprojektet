@@ -4,7 +4,7 @@ namespace Projekt_1___Vinterprojektet;
 
 public class Potions : Items
 {
-    public int HealAmount { get; private set; }
+    private int HealAmount { get; private set; }
 
     public Potions(string name, float weight, int healAmount) : base(name, weight)
     {

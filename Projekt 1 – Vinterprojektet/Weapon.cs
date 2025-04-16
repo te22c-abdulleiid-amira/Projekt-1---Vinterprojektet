@@ -5,7 +5,7 @@ namespace Projekt_1___Vinterprojektet;
 
 public class Weapon : Items
 {
-    public int Damage { get; private set; }
+    private int Damage { get; private set; }
 
     public Weapon(string name, float weight, int damage) : base(name, weight)
     {

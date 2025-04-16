@@ -6,8 +6,8 @@ namespace Projekt_1___Vinterprojektet;
 
 public class Items
 {
-    public string Name { get; private set; }
-    public float Weight { get; private set; }
+    private string Name { get; private set; }
+    private float Weight { get; private set; }
 
     public Items(string name, float weight)
     {
