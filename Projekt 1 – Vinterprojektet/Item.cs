@@ -6,8 +6,8 @@ namespace Projekt_1___Vinterprojektet;
 
 public class Items
 {
-    private string Name { get; private set; }
-    private float Weight { get; private set; }
+    public string Name { get; private set; }
+    public float Weight { get; private set; }
 
     public Items(string name, float weight)
     {
@@ -15,9 +15,5 @@ public class Items
         Weight = weight;
     }
 
-    public virtual void Use()
-    {
-        Console.WriteLine($"{Name} används.");
-    }
-
+    public abstract void Use(Character target);
 }
