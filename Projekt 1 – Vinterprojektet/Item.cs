@@ -4,16 +4,36 @@ using System.Collections.Generic;
 namespace Projekt_1___Vinterprojektet;
 
 
-public class Items
+public abstract class Item
 {
-    public string Name { get; private set; }
-    public float Weight { get; private set; }
+    // namnet på item
+    private string name;
 
-    public Items(string name, float weight)
+    // vikten av item
+    private float weight;
+
+    // konstruktor som sätter namn och vikt
+    public Item(string name, float weight)
     {
-        Name = name;
-        Weight = weight;
+        this.name = name;
+        this.weight = weight;
     }
 
-    public abstract void Use(Character target);
+    // returnerar namnet
+    public string GetName()
+    {
+        return name;
+    }
+
+    // returnerar vikten
+    public float GetWeight()
+    {
+        return weight;
+    }
+
+    // metod som används när item används på en karaktär
+    public void Use(Character target)
+    {
+
+    }
 }

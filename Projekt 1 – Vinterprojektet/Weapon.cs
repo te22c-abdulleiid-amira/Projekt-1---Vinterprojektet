@@ -3,16 +3,22 @@ using System.Collections.Generic;
 
 namespace Projekt_1___Vinterprojektet;
 
-public class Weapon : Items
+// Weapon.cs
+public class Weapon : Item
 {
-    public int Damage { get; private set; }
+    private int damage;
 
     public Weapon(string name, float weight, int damage) : base(name, weight)
     {
-        Damage = damage;
+        this.damage = damage;
     }
 
-    public override void Use(Character target)
+    public int GetDamage()
+    {
+        return damage;
+    }
+
+    public new void Use(Character target)
     {
         target.SetCurrentWeapon(this);
     }
