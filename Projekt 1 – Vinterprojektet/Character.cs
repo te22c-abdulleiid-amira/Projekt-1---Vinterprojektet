@@ -34,6 +34,7 @@ public abstract class Character
         hp += amount;
         Console.WriteLine(name + " helades med " + amount + " HP.");
     }
+    // max 100 heal
 
     public void TakeDamage(int amount)
     {
@@ -42,6 +43,7 @@ public abstract class Character
         hp -= actualDamage;
         Console.WriteLine(name + " tog " + actualDamage + " skada.");
     }
+    // min 0 damage
 
     public void IncreaseDefense(int amount)
     {

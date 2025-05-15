@@ -6,3 +6,6 @@ string characterName = Console.ReadLine();
 Console.WriteLine("Välj kön:");
 Console.WriteLine("1. Kvinna");
 Console.WriteLine("2. Man");
+
+
+// skapa enemy 
