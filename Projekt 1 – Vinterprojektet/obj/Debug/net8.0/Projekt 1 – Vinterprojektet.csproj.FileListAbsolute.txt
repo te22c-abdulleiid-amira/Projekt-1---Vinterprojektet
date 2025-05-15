@@ -1,0 +1,15 @@
+c:\Users\amira.abdulleiid\OneDrive\Dokument\programering\Projekt 2 – Slutprojektet\Projekt 1 – Vinterprojektet\bin\Debug\net8.0\Projekt 1 – Vinterprojektet.exe
+C:\Users\amira.abdulleiid\OneDrive\Dokument\programering\Projekt 2 – Slutprojektet\Projekt 1 – Vinterprojektet\bin\Debug\net8.0\Projekt 1 – Vinterprojektet.deps.json
+C:\Users\amira.abdulleiid\OneDrive\Dokument\programering\Projekt 2 – Slutprojektet\Projekt 1 – Vinterprojektet\bin\Debug\net8.0\Projekt 1 – Vinterprojektet.runtimeconfig.json
+c:\Users\amira.abdulleiid\OneDrive\Dokument\programering\Projekt 2 – Slutprojektet\Projekt 1 – Vinterprojektet\bin\Debug\net8.0\Projekt 1 – Vinterprojektet.dll
+c:\Users\amira.abdulleiid\OneDrive\Dokument\programering\Projekt 2 – Slutprojektet\Projekt 1 – Vinterprojektet\bin\Debug\net8.0\Projekt 1 – Vinterprojektet.pdb
+c:\Users\amira.abdulleiid\OneDrive\Dokument\programering\Projekt 2 – Slutprojektet\Projekt 1 – Vinterprojektet\obj\Debug\net8.0\Projekt 1 – Vinterprojektet.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\amira.abdulleiid\OneDrive\Dokument\programering\Projekt 2 – Slutprojektet\Projekt 1 – Vinterprojektet\obj\Debug\net8.0\Projekt 1 – Vinterprojektet.AssemblyInfoInputs.cache
+c:\Users\amira.abdulleiid\OneDrive\Dokument\programering\Projekt 2 – Slutprojektet\Projekt 1 – Vinterprojektet\obj\Debug\net8.0\Projekt 1 – Vinterprojektet.AssemblyInfo.cs
+c:\Users\amira.abdulleiid\OneDrive\Dokument\programering\Projekt 2 – Slutprojektet\Projekt 1 – Vinterprojektet\obj\Debug\net8.0\Projekt 1 – Vinterprojektet.csproj.CoreCompileInputs.cache
+c:\Users\amira.abdulleiid\OneDrive\Dokument\programering\Projekt 2 – Slutprojektet\Projekt 1 – Vinterprojektet\obj\Debug\net8.0\Projekt 1 – Vinterprojektet.sourcelink.json
+c:\Users\amira.abdulleiid\OneDrive\Dokument\programering\Projekt 2 – Slutprojektet\Projekt 1 – Vinterprojektet\obj\Debug\net8.0\Projekt 1 – Vinterprojektet.dll
+c:\Users\amira.abdulleiid\OneDrive\Dokument\programering\Projekt 2 – Slutprojektet\Projekt 1 – Vinterprojektet\obj\Debug\net8.0\refint\Projekt 1 – Vinterprojektet.dll
+c:\Users\amira.abdulleiid\OneDrive\Dokument\programering\Projekt 2 – Slutprojektet\Projekt 1 – Vinterprojektet\obj\Debug\net8.0\Projekt 1 – Vinterprojektet.pdb
+C:\Users\amira.abdulleiid\OneDrive\Dokument\programering\Projekt 2 – Slutprojektet\Projekt 1 – Vinterprojektet\obj\Debug\net8.0\Projekt 1 – Vinterprojektet.genruntimeconfig.cache
+C:\Users\amira.abdulleiid\OneDrive\Dokument\programering\Projekt 2 – Slutprojektet\Projekt 1 – Vinterprojektet\obj\Debug\net8.0\ref\Projekt 1 – Vinterprojektet.dll

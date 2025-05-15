@@ -12,7 +12,7 @@ public abstract class Item
     // vikten av item
     private float weight;
 
-    // konstruktor som sätter namn och vikt
+    // metod som sätter namn och vikt
     public Item(string name, float weight)
     {
         this.name = name;
