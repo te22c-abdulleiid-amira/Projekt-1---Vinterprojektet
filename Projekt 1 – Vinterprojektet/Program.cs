@@ -9,7 +9,7 @@ Character player;
 
 while (true)
 {
-    Console.Write("Välj kön på din karaktär (female/male): ");
+    Console.Write("Välj kön på din karaktär (skriv female/male): ");
     string gender = Console.ReadLine().ToLower();
 
     if (gender == "female")
@@ -49,7 +49,7 @@ Console.WriteLine("\nEquipa Svärd:");
 player.UseItem("Svärd");
 
 // akapa en fiende
-Enemy enemy = new Enemy("Onskefulla Fienden", 80, 8);
+Enemy enemy = new Enemy("Dark Reunion attackerar", 80, 8);
 
 // fienden attackerar spelaren
 enemy.Attack(player);
