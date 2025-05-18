@@ -32,16 +32,17 @@ public abstract class Character
     public void Heal(int amount)
     {
         hp += amount;
-        Console.WriteLine(name + " helades med " + amount + " HP.");
+        if (hp > 100) hp = 100;
+        Console.WriteLine($"{name} har nu {hp} HP.");
     }
     // max 100 heal
 
     public void TakeDamage(int amount)
     {
-        int actualDamage = amount - defense;
-        if (actualDamage < 0) actualDamage = 0;
-        hp -= actualDamage;
-        Console.WriteLine(name + " tog " + actualDamage + " skada.");
+        
+        hp -= amount;
+        if (hp < 0) hp = 0;
+        Console.WriteLine($"{name} tog {amount} skada och har nu {hp} HP.");
     }
     // min 0 damage
 
