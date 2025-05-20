@@ -3,61 +3,64 @@ using Projekt_1___Vinterprojektet;
 
 Console.WriteLine("Välkommen till spelet, din gloriosa kung Lebron!");
 Console.Write("Skriv in namnet på din karaktär: ");
-string playerName = Console.ReadLine();
+string characterName = Console.ReadLine();
 
-Character player;
+Character player = null;
 
-while (true)
+while (player == null)
 {
-    Console.Write("Välj kön på din karaktär (skriv female/male): ");
-    string gender = Console.ReadLine().ToLower();
+    Console.WriteLine("Välj kön:");
+    Console.WriteLine("1. Kvinna");
+    Console.WriteLine("2. Man");
 
-    if (gender == "female")
+    string choice = Console.ReadLine();
+
+    if (choice == "1")
     {
-    player = new FemaleCharacter(playerName);
-    break; // break avslutar loop- eller switch-satser
+        player = new FemaleCharacter(characterName);
     }
-    else if (gender == "male")
+    else if (choice == "2")
     {
-        // Byt ut mot MaleCharacter när den finns
-        player = new FemaleCharacter(playerName);
-        break;
+        player = new MaleCharacter(characterName);
     }
     else
     {
-        Console.WriteLine("Felaktigt val, försök igen.");
+        Console.WriteLine("Ogiltigt val, försök igen.");
     }
 }
 
-Weapon sword = new Weapon("svärd", 10, 15);
-Potions potion = new Potions("medicin", 10, 20);
-Armor shield = new Armor("sköld", 10, 5);
+// skapa en fiende
+Enemy enemy = new Enemy("Orc", 100, 5);
+Console.WriteLine($"\nEn fiende dyker upp: {enemy.GetName()}!");
 
-// lägg till items i spelarens inventory
+// skapa föremål
+Weapon sword = new Weapon("Svärd", 5, 15);
+Armor shield = new Armor("Sköld", 3, 10);
+Potions potion = new Potions("Hälsodryck", 1, 20);
+
+// lägg till i inventory
 player.AddToInventory(sword);
-player.AddToInventory(potion);
 player.AddToInventory(shield);
+player.AddToInventory(potion);
 
 // visa inventory
 player.ShowInventory();
-// använd ett item (exempel: använda potion på sig själv)
-Console.WriteLine("\nAnvänder Liten hälsodryck på dig själv:");
-player.UseItem("Liten hälsodryck");
 
-// använd ett annat item (exempel: equipa svärd)
-Console.WriteLine("\nEquipa Svärd:");
-player.UseItem("Svärd");
+// Välj vapen
+player.SetCurrentWeapon(sword);
 
-// akapa en fiende
-Enemy enemy = new Enemy("Dark Reunion attackerar", 80, 8);
+// Använd rustning (ökar defense)
+player.UseItem("Sköld");
 
-// fienden attackerar spelaren
+// Använd potion (healar spelaren)
+player.UseItem("Hälsodryck");
+
+// Fienden attackerar spelaren
 enemy.Attack(player);
 
-// visa spelarens HP efter attacken
-Console.WriteLine($"{player.GetName()} har {player.GetHP()} HP kvar.");
+// Spelaren attackerar fienden
+player.UseItem("Svärd", enemy);
 
-    
-Console.WriteLine("\nTryck på valfri tangent för att avsluta.");
-Console.ReadKey();
-
+// Slutresultat
+Console.WriteLine($"\n{player.GetName()} har {player.GetHP()} HP kvar.");
+Console.WriteLine($"{enemy.GetName()} har {enemy.GetHP()} HP kvar.");
