@@ -25,42 +25,128 @@ while (player == null)
     }
     else
     {
-        Console.WriteLine("Ogiltigt val, försök igen.");
+        Console.WriteLine("fel val, försök igen.");
     }
 }
 
-// skapa en fiende
+// Skapa en fiende
 Enemy enemy = new Enemy("Orc", 100, 5);
-Console.WriteLine($"\nEn fiende dyker upp: {enemy.GetName()}!");
+Console.WriteLine($"En fiende dyker upp: {enemy.GetName()}!");
 
-// skapa föremål
+// Skapa föremål
 Weapon sword = new Weapon("Svärd", 5, 15);
 Armor shield = new Armor("Sköld", 3, 10);
 Potions potion = new Potions("Hälsodryck", 1, 20);
 
-// lägg till i inventory
-player.AddToInventory(sword);
-player.AddToInventory(shield);
-player.AddToInventory(potion);
+// Lista av tillgängliga föremål
+List<Item> availableItems = new List<Item> { sword, shield, potion };
+int itemsTaken = 0;
 
-// visa inventory
+// huvudmeny innan strid
+while (itemsTaken < 3)
+{
+    Console.WriteLine("Vad vill du göra?");
+    Console.WriteLine("1. Ta ett föremål");
+    Console.WriteLine("2. Gå till strid");
+
+    string input = Console.ReadLine();
+
+    if (input == "1")
+    {
+        Console.WriteLine("Välj ett föremål att ta:");
+        for (int i = 0; i < availableItems.Count; i++)
+        {
+            Console.WriteLine($"{i + 1}. {availableItems[i].GetName()}");
+        }
+
+        string itemChoice = Console.ReadLine();
+        if (int.TryParse(itemChoice, out int index) && index >= 1 && index <= availableItems.Count) // satsen kollar om användaren skrev en siffra, och om den siffran motsvarar ett giltigt val i listan.
+        {
+            Item selectedItem = availableItems[index - 1];
+            player.AddToInventory(selectedItem);
+            availableItems.RemoveAt(index - 1);
+            itemsTaken++;
+        }
+        else
+        {
+            Console.WriteLine("Ogiltigt val.");
+        }
+    }
+    else if (input == "2" && itemsTaken == 3)
+    {
+        break;
+    }
+    else
+    {
+        Console.WriteLine("Du måste ta alla 3 föremål innan du kan slåss.");
+    }
+}
+
+// visa inventory före strid
+Console.WriteLine("Dags för strid!");
 player.ShowInventory();
 
-// Välj vapen
-player.SetCurrentWeapon(sword);
 
-// Använd rustning (ökar defense)
-player.UseItem("Sköld");
+// strid
+bool fightOngoing = true;
 
-// Använd potion (healar spelaren)
-player.UseItem("Hälsodryck");
+while (fightOngoing)
+{
+    Console.WriteLine("vad vill du göra?");
+    Console.WriteLine("1. använd föremål på dig själv");
+    Console.WriteLine("2. använd föremål på fienden");
+    Console.WriteLine("3. visa inventory");
+    Console.WriteLine("4. avsluta strid");
 
-// Fienden attackerar spelaren
-enemy.Attack(player);
+    string action = Console.ReadLine();
 
-// Spelaren attackerar fienden
-player.UseItem("Svärd", enemy);
+    
+    if (action == "1")
+    {
+        Console.Write("ange föremålsnamn: ");
+        string selfItem = Console.ReadLine();
+        player.UseItem(selfItem);
+    }
 
-// Slutresultat
-Console.WriteLine($"\n{player.GetName()} har {player.GetHP()} HP kvar.");
-Console.WriteLine($"{enemy.GetName()} har {enemy.GetHP()} HP kvar.");
+    else if (action == "2")
+    {
+        Console.Write("ange föremålsnamn: ");
+        string targetItem = Console.ReadLine();
+        player.UseItem(targetItem, enemy);
+    }
+
+    else if (action == "3")
+    {
+        player.ShowInventory();
+    }
+
+    else if (action == "4")
+    {
+        fightOngoing = false;
+    }
+    
+    else if (action == "5")
+    {
+        Console.WriteLine("fel val.");
+    }
+    
+
+    // Fienden attackerar efter varje drag
+    if (enemy.GetHP() > 0)
+    {
+        enemy.Attack(player);
+    }
+
+    if (player.GetHP() <= 0)
+    {
+        Console.WriteLine($"{player.GetName()} dog. Spelet är över.");
+        fightOngoing = false;
+    }
+    else if (enemy.GetHP() <= 0)
+    {
+        Console.WriteLine($"{enemy.GetName()} är besegrad! Du vann.");
+        fightOngoing = false;
+    }
+}
+
+Console.WriteLine("fin");
