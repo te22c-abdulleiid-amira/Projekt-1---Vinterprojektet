@@ -4,7 +4,7 @@ namespace Projekt_1___Vinterprojektet;
 
 public class Enemy : Character
 {
- public Enemy(string name, int hp, int defense) : base(name, hp, defense)
+    public Enemy(string name, int hp, int defense) : base(name, hp, defense)
     {
     }
 

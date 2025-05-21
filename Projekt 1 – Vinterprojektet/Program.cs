@@ -29,16 +29,16 @@ while (player == null)
     }
 }
 
-// Skapa en fiende
+// skapa en fiende
 Enemy enemy = new Enemy("Orc", 100, 5);
 Console.WriteLine($"En fiende dyker upp: {enemy.GetName()}!");
 
-// Skapa föremål
+// skapa föremål
 Weapon sword = new Weapon("Svärd", 5, 15);
-Armor shield = new Armor("Sköld", 3, 10);
-Potions potion = new Potions("Hälsodryck", 1, 20);
+Armor shield = new Armor("Sköld", 7, 10);
+Potions potion = new Potions("Hälsodryck", 2, 20);
 
-// Lista av tillgängliga föremål
+// lista av tillgängliga föremål
 List<Item> availableItems = new List<Item> { sword, shield, potion };
 int itemsTaken = 0;
 
